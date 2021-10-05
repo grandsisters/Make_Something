@@ -82,7 +82,7 @@
       }
       .typing-tool {
         display: none;
-        z-index: 1px;
+        z-index: -1px;
         position: absolute;
         width: 72px;
         bottom: -40px;
@@ -103,7 +103,7 @@
       }
       .voice-search {
         display: none;
-        z-index: 1px;
+        z-index: -1px;
         position: absolute;
         width: 72px;
         bottom: -40px;
@@ -169,6 +169,42 @@
       .corona19:hover {
         text-decoration: underline;
       }
+      .footer-setting {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding: 18px 5px;
+      }
+      .setting-block {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        bottom: 58px;
+        right: 0px;
+        border: 1px solid rgb(128, 128, 128);
+        background-color: #2f3031;
+        min-width: 250px;
+        height: 300px;
+      }
+      .settings {
+        padding: 12px 16px;
+        text-decoration: none;
+        color: grey;
+        font-size: 13.5px;
+        display: block;
+      }
+      .setting-line {
+        border-top: 1px solid rgb(128, 128, 128);
+      }
+      .footer-setting:hover .setting-block {
+        display: flex;
+        flex-direction: column;
+      }
+      .settings:hover {
+        display: block;
+        text-decoration: underline;
+      }
+
     </style>
   </head>
   <body>
@@ -236,15 +272,25 @@
         </div>
         <div class="footer-box">
           <div>
-            <a class="footer-items" href="">Google 정보</a>
-            <a class="footer-items" href="">광고</a>
-            <a class="footer-items" href="">비즈니스</a>
-            <a class="footer-items" href="">검색의 원리</a>
+            <a class="footer-items" href="https://about.google/?utm_source=google-KR&utm_medium=referral&utm_campaign=hp-footer&fg=1">Google 정보</a>
+            <a class="footer-items" href="https://ads.google.com/intl/ko_kr/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">광고</a>
+            <a class="footer-items" href="https://www.google.com/intl/ko_kr/business/">비즈니스</a>
+            <a class="footer-items" href="https://www.google.com/search/howsearchworks/?fg=1">검색의 원리</a>
           </div>         
           <div>
-            <a class="footer-items" href="">개인정보처리방침</a>
-            <a class="footer-items" href="">약관</a>
-            <a class="footer-items" href="">설정</a>
+            <a class="footer-items" href="https://policies.google.com/privacy?hl=ko&fg=1">개인정보처리방침</a>
+            <a class="footer-items" href="https://policies.google.com/terms?hl=ko&fg=1">약관</a>
+            <div class="footer-items footer-setting">설정
+              <div class="setting-block">
+                <a href="" class="settings">검색 설정</a>
+                <a href="" class="settings">고급검색</a>
+                <a href="" class="settings">Google 검색에 도움이 되는 데이터</a>
+                <a href="" class="settings">검색 기록</a>
+                <a href="" class="settings">검색 도움말</a>
+                <a href="" class="settings">의견 보내기</a>
+                <a href="" class="settings setting-line">어두운 테마: 사용</a>
+              </div>
+            </div>
           </div>         
         </div>
       </div>

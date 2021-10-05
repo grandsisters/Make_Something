@@ -29,6 +29,9 @@
       .menu {
         padding: 0.5em;
       }
+      .menu:hover {
+        text-decoration: underline;
+      }
       .apps {
         width: 23px;
       }
@@ -47,23 +50,29 @@
         align-items: flex-end;
       }
       .search-bar {
-        width: 33em;
+        width: 500px;
         padding: 10px;
         border: 1px solid black;
         border-radius: 25px;
         display: flex;
       }
       .search-bar:hover {
-        border: 1px solid red;
+        border: 1px solid black;
+        background-color: black;
+      }
+      .search-bar:hover #search-input{
+        border: 1px solid black;
+        background-color: black;
+        border: black;
       }
       .search-bar-icons {
         width: 20px;
       }
-      input {
-        padding-right: 21.3em;
+      #search-input {
         background-color: #2f3031;
         outline: none;
         border: none;
+        flex: 1;
       }
       .typing-tool-box {
         display: flex;
@@ -117,11 +126,11 @@
         margin: 20px 5px;
         border-radius: 5px;
       }
+      .seach-bar-bottom-things:hover {
+        border: 1px solid grey;
+      }
       .bottom-space {
         height: 300px;
-      }
-      .corona19 {
-        text-decoration: none;
       }
       .footer {
         min-width: 100%;
@@ -134,9 +143,6 @@
       .nation {
         padding: 10px;
       }
-      /* .empty-box {
-        padding: 0px 23px;
-      } */
       .footer-box {
         background-color: rgb(77, 80, 83);
         min-width: 100%;
@@ -152,20 +158,33 @@
       .footer-items:hover {
         text-decoration: underline;
       }
+      .link-text-deco {
+        text-decoration: none;
+      }
+      .white-font {
+        color: white;
+      }
+      .corona19:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <div class="Google-body">
       <div class="menu-bar">
-        <div class="menu">Gmail</div>
-        <div class="menu">이미지</div>
+        <div class="menu"><a class="white-font link-text-deco" href="*">Gmail</a></div>
+        <div class="menu"><a class="white-font link-text-deco" href="*">이미지</a></div>
         <div class="menu">
+          <a class="link-text-deco" href="*">
           <img
             class="apps"
             src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_apps_48px-256.png"
           />
+        </a>
         </div>
+        <a class="white-font link-text-deco" href="*">
         <div class="menu login-button">로그인</div>
+      </a>
       </div>
       <div class="logo">
         <img
@@ -175,13 +194,13 @@
       </div>
       <div>
         <div class="search-bar">
-          <div>
+          <label for="search-input">
             <img
               class="search-bar-icons"
               src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_search_48px-128.png"
             />
-          </div>
-          <div><input /></div>
+          </label>
+          <input type="search" name="search" id="search-input">
           <div class="typing-tool-box">
             <img
               class="typing-tool-img search-bar-icons"
@@ -198,13 +217,13 @@
           </div>
         </div>
         <div class="seach-bar-bottom">
-          <div class="seach-bar-bottom-things">Google 검색</div>
-          <div class="seach-bar-bottom-things">I'm Feeling Lucky</div>
+          <div class="seach-bar-bottom-things"><a class="link-text-deco" href="*">Google 검색</a></div>
+          <div class="seach-bar-bottom-things"><a class="link-text-deco" href=https://www.google.com/doodles>I'm Feeling Lucky</a></div>
         </div>
       </div>
       <div class="bottom-space">
         <div>
-          <a class="corona19" href=""
+          <a class="corona19 link-text-deco" href="https://www.google.com/search?q=%EA%B0%80%EA%B9%8C%EC%9A%B4+%EC%BD%94%EB%A1%9C%EB%82%9819+%EC%84%A0%EB%B3%84+%EA%B2%80%EC%82%AC%EC%86%8C&sxsrf=ALeKk02872TvqCygr6zJ187t7YQq13WT4Q%3A1629872922979&ei=GuMlYZjaOc-B-Aa58aGwCA&oq=%EA%B0%80%EA%B9%8C%EC%9A%B4+%EC%BD%94%EB%A1%9C%EB%82%9819+%EC%84%A0%EB%B3%84+%EA%B2%80%EC%82%AC%EC%86%8C&gs_lcp=Cgdnd3Mtd2l6EANKBAhBGAFQ3QVYkhBgqxRoAXAAeACAAbUBiAH9BZIBAzAuNZgBAKABAcABAQ&sclient=gws-wiz&ved=0ahUKEwiYz-fkxcvyAhXPAN4KHbl4CIYQ4dUDCA4&uact=5&utm_source=google&utm_medium=HPP&utm_campaign=covid_testing_kr_kr_desktop&utm_id=covid_testing_kr_kr_desktop"
             >가까운 코로나19 선별 진료소를 확인하세요.</a
           >
         </div>
@@ -214,20 +233,17 @@
           <div class="nation">대한민국</div>
         </div>
         <div class="footer-box">
-          <!-- <div class="empty-box"></div> -->
           <div>
             <a class="footer-items" href="">Google 정보</a>
             <a class="footer-items" href="">광고</a>
             <a class="footer-items" href="">비즈니스</a>
             <a class="footer-items" href="">검색의 원리</a>
-          </div>
-          <!-- <div class="empty-box"></div> -->
+          </div>         
           <div>
             <a class="footer-items" href="">개인정보처리방침</a>
             <a class="footer-items" href="">약관</a>
             <a class="footer-items" href="">설정</a>
-          </div>
-          <!-- <div class="empty-box"></div> -->
+          </div>         
         </div>
       </div>
     </div>
